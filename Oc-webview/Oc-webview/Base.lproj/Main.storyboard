@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U3s-RA-G06"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xbb-iB-KYi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kho-49-2SS">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="u9Z-df-jFp">
+                                        <connections>
+                                            <action selector="doStop:" destination="vXZ-lx-hvc" id="dr4-4v-x4d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" width="42" style="plain" systemItem="fixedSpace" id="K6M-SC-Bi3"/>
+                                    <barButtonItem systemItem="refresh" id="fZ9-d2-jTR">
+                                        <connections>
+                                            <action selector="dofresh:" destination="vXZ-lx-hvc" id="JX2-80-joF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" style="plain" systemItem="flexibleSpace" id="0SY-3q-zxI"/>
+                                    <barButtonItem systemItem="rewind" id="Cya-jY-oly">
+                                        <connections>
+                                            <action selector="doBack:" destination="vXZ-lx-hvc" id="HRc-bu-vwY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" width="42" style="plain" systemItem="fixedSpace" id="Dpd-tA-bjm"/>
+                                    <barButtonItem systemItem="fastForward" id="jOc-Wi-e9l">
+                                        <connections>
+                                            <action selector="doForward:" destination="vXZ-lx-hvc" id="tJP-A3-rlx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hv4-iK-DtL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mWebView" destination="Hv4-iK-DtL" id="HDF-cz-7tn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="265"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
